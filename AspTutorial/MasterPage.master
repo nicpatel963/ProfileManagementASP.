@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style3 {
+            height: 26px;
+            width: 58px;
+        }
+        .auto-style2 {
+            height: 26px;
+            width: 1340px;
+        }
+        .auto-style4 {
+            height: 122px;
+        }
+        .auto-style5 {
+            height: 174px;
+        }
+    </style>
+</head>
+<body style="height: 55px">
+    <form id="form1" runat="server">
+        <div class="auto-style5">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style3">
+                        <asp:LinkButton ID="LinkBtnHome" runat="server" PostBackUrl="First.aspx" CausesValidation="False">Home</asp:LinkButton>
+                    </td>
+                    <td class="auto-style2">
+                        <asp:LinkButton ID="LinkbtnLogin" runat="server" PostBackUrl="Login.aspx" CausesValidation="False">Login</asp:LinkButton>
+                    &nbsp;
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/addUser.aspx">addUser</asp:HyperLink>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <p class="auto-style4">
+                                <br />
+                            </p>
+                            
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
